@@ -1,0 +1,106 @@
+drop_zones:
+  # Step 1: PrompEnhancer - Convert prompt.txt to initProject.md
+  - name: "PrompEnhancer Agent"
+    file_patterns: 
+      - "prompt.txt"
+      - "*prompt*.txt"
+    reusable_prompt: ".claude/commands/prompt_enhancer.md"
+    zone_dirs:
+      - "zone-dir"
+      - "project-drops"
+    events: 
+      - "created"
+      - "modified"
+    agent: "claude_code"
+    model: "sonnet"
+    color: "blue"
+    create_zone_dir_if_not_exists: true
+
+  # Step 2: BMAD Project Initializer - Process initProject.md
+  - name: "BMAD Project Initializer"
+    file_patterns: 
+      - "initProject.md"
+      - "*initProject*.md"
+    reusable_prompt: ".claude/commands/bmad_project_init.md"
+    zone_dirs:
+      - "zone-dir"
+      - "project-drops"
+    events: 
+      - "created"
+      - "modified"
+    agent: "bmad_automator"
+    model: "claude-3-5-sonnet-20241022"
+    color: "magenta"
+    create_zone_dir_if_not_exists: true
+    new_project_variant: true
+    bmad_automator_path: "bmad_automator_enhanced_md.py"
+
+  # PrompEnhancer Output Zone
+  - name: "PrompEnhancer Output"
+    file_patterns:
+      - "enhanced_*.md"
+      - "*_enhanced.md"
+    reusable_prompt: ".claude/commands/process_enhanced_prompt.md"
+    zone_dirs:
+      - "enhanced-prompts"
+    events:
+      - "created"
+    agent: "claude_code"
+    model: "sonnet"
+    color: "cyan"
+    create_zone_dir_if_not_exists: true
+
+  # General Project Documentation Zone
+  - name: "Project Documentation"
+    file_patterns:
+      - "*.md"
+      - "*.txt"
+    reusable_prompt: ".claude/commands/document_processor.md"
+    zone_dirs:
+      - "docs"
+      - "documentation"
+    events:
+      - "created"
+      - "modified"
+    agent: "claude_code"
+    model: "haiku"
+    color: "blue"
+    create_zone_dir_if_not_exists: false
+
+  # Code Review Zone
+  - name: "Code Review Assistant"
+    file_patterns:
+      - "*.py"
+      - "*.js"
+      - "*.ts"
+      - "*.jsx"
+      - "*.tsx"
+    reusable_prompt: ".claude/commands/code_review.md"
+    zone_dirs:
+      - "code-review"
+      - "review-queue"
+    events:
+      - "created"
+    agent: "claude_code"
+    model: "sonnet"
+    color: "green"
+    create_zone_dir_if_not_exists: true
+
+  # Configuration Files Zone
+  - name: "Config File Validator"
+    file_patterns:
+      - "*.yaml"
+      - "*.yml"
+      - "*.json"
+      - "*.toml"
+    reusable_prompt: ".claude/commands/config_validator.md"
+    zone_dirs:
+      - "configs"
+      - "settings"
+    events:
+      - "created"
+      - "modified"
+    agent: "claude_code"
+    model: "haiku"
+    color: "yellow"
+    create_zone_dir_if_not_exists: true

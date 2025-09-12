@@ -1,0 +1,15 @@
+Build a smart recipe recommendation app that uses AI to suggest personalized recipes based on user preferences, dietary restrictions, and ingredients they have available. 
+
+The app should have a modern web interface where users can:
+- Input their dietary preferences (vegan, keto, gluten-free, etc.)
+- Upload photos of ingredients they have
+- Get AI-generated recipe suggestions
+- Save favorite recipes
+- Generate shopping lists
+- Share recipes with friends
+
+I want this to be a full-stack web application that can handle multiple users and scale to thousands of users. It should use modern technologies and be deployed to the cloud.
+
+The app should also have some social features like rating recipes, commenting, and following other users. Maybe add some gamification elements to encourage engagement.
+
+Budget is flexible but want to keep it reasonable for a startup. Timeline should be aggressive but realistic for getting to market quickly.
