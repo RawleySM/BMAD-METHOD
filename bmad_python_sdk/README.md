@@ -25,7 +25,12 @@ python3 example.py
 ```
 
 The script will:
+
 1.  Run a simulation of the "Greenfield Full-Stack" workflow, printing out each step of the agent hand-off process.
 2.  Generate a sample prompt from the `prd-tmpl.yaml` template to demonstrate the prompt generation capabilities.
 
 This SDK provides a foundation for building a fully-fledged implementation of the BMAD workflow using Python and the Google Agents ADK.
+
+## Additional Documentation
+
+For an in-depth review, architecture diagrams, PRD, technical specifications, and roadmap guidance, see [`docs/bmad-python-sdk.md`](../docs/bmad-python-sdk.md).
