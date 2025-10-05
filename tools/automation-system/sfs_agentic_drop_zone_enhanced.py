@@ -56,7 +56,8 @@ def check_environment_variables():
     }
 
     optional_vars = {
-        "REPLICATE_API_TOKEN": "Optional - needed for image generation/editing (won't be able to generate images without it)"
+        "REPLICATE_API_TOKEN": "Optional - needed for image generation/editing (won't be able to generate images without it)",
+        "GEMINI_API_KEY": "Optional - needed for Gemini CLI agent (won't be able to use Gemini CLI without it)"
     }
 
     missing_required = []
