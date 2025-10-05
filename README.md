@@ -112,6 +112,11 @@ BMAD™'s natural language framework works in ANY domain. Expansion packs provid
 
 ## Documentation & Resources
 
+### SDKs & Integrations
+
+- 🐍 **[Python SDK (Simulator)](bmad_python_sdk/README.md)** – Reference implementation that simulates the BMAD workflow without calling an external provider. Originally designed for the Google Agents ADK.
+- 🤖 **[Python SDK for OpenAI Agents](bmad_openai_sdk/README.md)** – Drop-in alternative that drives BMAD agents through the OpenAI Agents SDK/Responses API.
+
 ### Essential Guides
 
 - 📖 **[User Guide](docs/user-guide.md)** - Complete walkthrough from project inception to completion
