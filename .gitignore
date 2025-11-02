@@ -11,6 +11,11 @@ logs/
 *.log
 npm-debug.log*
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
 # Build output
 build/*.txt
 web-bundles/

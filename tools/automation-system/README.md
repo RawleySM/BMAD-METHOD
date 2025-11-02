@@ -62,7 +62,9 @@ cp sample_prompt.txt zone-dir/prompt.txt
 ANTHROPIC_API_KEY=your-api-key-here
 
 # Optional
+GEMINI_API_KEY=your-gemini-api-key-here
 CLAUDE_CODE_PATH=claude
+GEMINI_CLI_PATH=gemini
 BMAD_AUTOMATOR_PATH=bmad_automator_enhanced_md.py
 ```
 

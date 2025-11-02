@@ -75,8 +75,14 @@ def create_env_file():
 # Required: Anthropic API Key for Claude SDK
 ANTHROPIC_API_KEY=your-api-key-here
 
+# Optional: Gemini API Key for Gemini CLI
+GEMINI_API_KEY=your-gemini-api-key-here
+
 # Optional: Claude Code CLI path (if not in PATH)
 CLAUDE_CODE_PATH=claude
+
+# Optional: Gemini CLI path (if not in PATH)
+GEMINI_CLI_PATH=gemini
 
 # Optional: Custom paths
 BMAD_AUTOMATOR_PATH=bmad_automator_enhanced_md.py
